@@ -1,0 +1,117 @@
+/* Tree Visualization Styles */
+
+.node circle {
+    fill: #4a9eff;
+    stroke: #2d7dd2;
+    stroke-width: 2px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.node circle:hover {
+    fill: #ff6b35;
+    stroke: #cc5529;
+    transform: scale(1.2);
+}
+
+.node circle.token {
+    fill: #98c379;
+    stroke: #7cb668;
+}
+
+.node circle.token:hover {
+    fill: #b5e890;
+}
+
+.node.selected circle {
+    fill: #ff6b35;
+    stroke: #cc5529;
+    stroke-width: 3px;
+}
+
+.node text {
+    font-size: 11px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    fill: #d4d4d4;
+    pointer-events: none;
+    text-anchor: middle;
+}
+
+.node text.type-label {
+    font-weight: 600;
+}
+
+.node text.token-text {
+    font-family: 'Fira Code', 'Consolas', monospace;
+    fill: #98c379;
+    font-size: 10px;
+}
+
+.link {
+    fill: none;
+    stroke: #555;
+    stroke-width: 1.5px;
+    stroke-opacity: 0.6;
+}
+
+.link.highlighted {
+    stroke: #ff6b35;
+    stroke-opacity: 1;
+    stroke-width: 2px;
+}
+
+/* Tooltip */
+.tree-tooltip {
+    position: absolute;
+    background: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    pointer-events: none;
+    z-index: 1000;
+    max-width: 300px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.tree-tooltip .tooltip-type {
+    color: #4fc1ff;
+    font-weight: 600;
+}
+
+.tree-tooltip .tooltip-text {
+    color: #98c379;
+    font-family: 'Fira Code', monospace;
+    margin-top: 4px;
+}
+
+/* Legend */
+.tree-legend {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    display: flex;
+    gap: 1rem;
+    font-size: 0.75rem;
+    color: #808080;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.legend-dot.syntax {
+    background: #4a9eff;
+}
+
+.legend-dot.token {
+    background: #98c379;
+}

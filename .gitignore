@@ -1,0 +1,32 @@
+# Swift
+.build/
+.swiftpm/
+Package.resolved
+*.xcodeproj
+*.xcworkspace
+DerivedData/
+
+# Docker
+.docker/
+
+# macOS
+.DS_Store
+*.swp
+*~
+
+# Node (in case we add any tooling later)
+node_modules/
+
+# IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Environment
+.env
+.env.local
+
+# Logs
+*.log
+logs/

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift Parse Tree Visualizer</title>
+
+    <!-- CodeMirror -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/tree.css">
+</head>
+<body>
+    <header>
+        <h1>Swift Parse Tree Visualizer</h1>
+        <p>Paste Swift code to visualize its syntax tree</p>
+    </header>
+
+    <main>
+        <section class="editor-panel">
+            <div class="panel-header">
+                <h2>Swift Code</h2>
+                <button id="parseBtn">Parse Code</button>
+            </div>
+            <div class="editor-container">
+                <textarea id="codeEditor"></textarea>
+            </div>
+        </section>
+
+        <section class="tree-panel">
+            <div class="panel-header">
+                <h2>Parse Tree</h2>
+                <div class="tree-controls">
+                    <button id="zoomIn" title="Zoom In">+</button>
+                    <button id="zoomOut" title="Zoom Out">-</button>
+                    <button id="resetView" title="Reset View">Reset</button>
+                </div>
+            </div>
+            <div id="treeContainer">
+                <div class="placeholder-message">
+                    <p>Click "Parse Code" to visualize the syntax tree</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-panel">
+            <div class="panel-header">
+                <h2>Node Details</h2>
+            </div>
+            <div id="nodeInfo">
+                <p class="placeholder">Click a node to see details</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="errorToast" class="toast hidden">
+        <span class="toast-message"></span>
+        <button class="toast-close">&times;</button>
+    </div>
+
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- CodeMirror -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/swift/swift.min.js"></script>
+
+    <!-- Application scripts -->
+    <script src="js/api.js"></script>
+    <script src="js/editor.js"></script>
+    <script src="js/tree-visualizer.js"></script>
+    <script src="js/node-info.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
